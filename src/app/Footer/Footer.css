@@ -1,0 +1,158 @@
+.footer {
+  background-color: #333;
+  color: #f1f1f1;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.footer-content-left,
+.footer-content-center,
+.footer-content-right {
+  flex: 1;
+  min-width: 250px;
+  margin: 10px;
+}
+
+.footer-content-center h2 {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: white;
+}
+
+.footer-content-center ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-content-center li {
+  margin: 8px 0;
+}
+
+.footer-content-center a {
+  text-decoration: none;
+  color: aliceblue;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.footer-content-center a:hover {
+  color: gold;
+  text-decoration: underline;
+}
+
+/* Left Section */
+.footer-content-left p {
+  font-size: 0.9em;
+  line-height: 1.5;
+}
+
+.footer-social-icon img {
+  width: 24px;
+  height: 24px;
+  margin: 5px;
+  cursor: pointer;
+}
+
+.footer-social-icon img:hover {
+  opacity: 0.8;
+}
+
+.footer-content-center ul li:hover {
+  text-decoration: underline;
+}
+
+/* Right Section */
+.footer-content-right ul li {
+  color: #d3d3d3;
+  font-size: 0.9em;
+}
+
+.footer hr {
+  border: 0;
+  border-top: 1px solid #444;
+  margin: 20px 0;
+}
+
+.footer-bottom {
+  background-color: tomato;
+  padding: 15px 0;
+  text-align: center;
+  font-size: 1rem;
+  font-weight: bold;
+  color: aliceblue;
+  margin-top: 20px;
+}
+
+.footer-copyright {
+  font-size: 0.8em;
+  color: #a1a1a1;
+}
+
+@media (max-width: 768px) {
+  .footer-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-content-left,
+  .footer-content-center,
+  .footer-content-right {
+    min-width: 100%;
+    margin: 10px 0;
+  }
+
+  .footer-content h2 {
+    font-size: 1.3em;
+  }
+
+  .footer-content ul li {
+    font-size: 0.9em;
+  }
+
+  .footer-content-left p {
+    font-size: 0.85em;
+  }
+
+  .footer hr {
+    margin: 15px 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer {
+    padding: 30px 10px;
+  }
+
+  .footer-content h2 {
+    font-size: 1.2em;
+  }
+
+  .footer-content ul li {
+    font-size: 0.85em;
+  }
+
+  .footer-content-left p {
+    font-size: 0.8em;
+  }
+
+  .footer-social-icon img {
+    width: 20px;
+    height: 20px;
+  }
+
+  .footer hr {
+    margin: 10px 0;
+  }
+
+  .footer-copyright {
+    font-size: 0.75em;
+  }
+}

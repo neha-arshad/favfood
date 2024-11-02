@@ -1,0 +1,161 @@
+.login-popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.login-container {
+  background: #fff;
+  width: 90%;
+  max-width: 400px;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
+  position: relative;
+}
+
+.login-popup-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.login-popup-title h2 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333;
+  margin: 0;
+}
+
+.login-popup-title img {
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+}
+
+.login-popup-inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.login-popup-inputs input {
+  padding: 0.8rem;
+  font-size: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.login-popup-inputs input:focus {
+  border-color: #007bff;
+}
+
+button {
+  background-color: white;
+  color: #747474;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 50px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+.login-popup-conditions {
+  display: flex;
+  align-items: center;
+  font-size: 0.85rem;
+  color: #666;
+  margin: 1.2rem 0;
+}
+
+.login-popup-conditions input {
+  margin-right: 0.5rem;
+}
+
+.login-popup-conditions p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.login-popup p {
+  text-align: center;
+  font-size: 0.9rem;
+  color: #333;
+}
+
+.login-popup span {
+  color: #007bff;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.login-popup span:hover {
+  text-decoration: underline;
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+  .login-container {
+    width: 90%;
+    padding: 1.5rem;
+  }
+
+  .login-popup-title h2 {
+    font-size: 1.25rem;
+  }
+
+  .login-popup-inputs input {
+    font-size: 0.9rem;
+    padding: 0.7rem;
+  }
+
+  button {
+    padding: 8px 16px;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .login-container {
+    padding: 1rem;
+  }
+
+  .login-popup-title h2 {
+    font-size: 1.2rem;
+  }
+
+  .login-popup-inputs input {
+    font-size: 0.85rem;
+    padding: 0.6rem;
+  }
+
+  .login-popup-conditions {
+    font-size: 0.8rem;
+  }
+
+  button {
+    padding: 8px 14px;
+    font-size: 0.8rem;
+  }
+
+  .login-popup p {
+    font-size: 0.8rem;
+  }
+}

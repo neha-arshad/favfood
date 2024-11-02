@@ -1,21 +1,307 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+* {
+  margin: 0%;
+  padding: 0%;
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  background: linear-gradient(to right, tomato, #f88b67, tomato);
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+}
+
+.logo img {
+  width: 70px;
+  height: 70px;
+  margin-left: 1rem;
+  border-radius: 50%;
+  border: 3px solid #e69500;
+  margin-top: 2.5px;
+}
+
+.nav-list {
+  list-style: none;
+  display: flex;
+  gap: 60px;
+  margin-left: 20rem;
+}
+
+.nav-list li a {
+  text-decoration: none;
+  color: black;
+  font-size: 20px;
+  transition: color 0.3s ease;
+}
+
+.nav-list li a:hover {
+  color: #f0a500;
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+}
+
+.search-bar input {
+  padding: 5px 10px;
+  font-size: 14px;
+  border-radius: 4px;
+}
+
+.search-bar button {
+  padding: 6px 12px;
+  margin-left: 8px;
+  background-color: #f0a500;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.search-bar button:hover {
+  background-color: #e69500;
+}
+
+.sign-btn {
+  background-color: white;
+  color: #747474;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 50px;
+  font-size: 1vw 30px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.sign-btn:hover {
+  background-color: #f0a500;
+  transform: scale(1.05);
+}
+
+.sign-btn:active {
+  background-color: #cc8400;
+  transform: scale(1);
+}
+
+/* Responsive Styles */
+
+@media (max-width: 1024px) {
+  .nav-list {
+    gap: 1.5rem;
+  }
+  .search-bar input {
+    width: 150px;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    padding: 1rem;
+  }
+
+  .nav-list {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+  }
+
+  .nav-list.show {
+    display: flex;
+    gap: 1rem;
+  }
+
+  .search-bar {
+    display: none;
+  }
+
+  .hamburger {
+    display: block;
+    cursor: pointer;
+  }
+
+  .hamburger span {
+    width: 30px;
+    height: 3px;
+    background-color: black;
+    margin: 6px 0;
+    display: block;
+  }
+}
+
+/* Mobile Screen (up to 767px) */
+@media (max-width: 767px) {
+  .navbar {
+    align-items: flex-start;
+  }
+
+  .nav-list {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+  }
+
+  .nav-list.show {
+    display: flex;
+    gap: 1rem;
+  }
+
+  .search-bar {
+    display: none;
+  }
+
+  .hamburger {
+    display: block;
+    cursor: pointer;
+  }
+
+  .sign-btn {
+    text-align: center;
+    padding: 10px;
+  }
+}
+
+/* Styling for the header section */
+
+.header {
+  background: url("/Images/header1.png") no-repeat right center;
+  background-size: contain;
+  position: relative;
+  height: 34vw;
+  margin-right: 5rem;
+}
+.header-content {
+  position: absolute;
+  display: flex;
+  align-items: start;
+  max-width: 50%;
+  flex-direction: column;
+  gap: 1.5vw;
+  left: 6vw;
+  margin-top: 10%;
+  margin-left: 4rem;
+  animation: fadeIn 5s;
+}
+
+.header-content h1 {
+  font-size: max(4.5vw, 22px);
+  font-weight: bold;
+  color: #fcb736;
+  color: rgb(177, 29, 79);
+}
+.highlight {
+  color: white;
+}
+
+.header-content p {
+  font-size: 1vw;
+  color: aliceblue;
+}
+
+.header-content button {
+  background-color: white;
+  color: #747474;
+  padding: 1vw 2.3vw;
+  border: none;
+  border-radius: 50px;
+  font-size: 1vw 30px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.header-content button:hover {
+  background-color: #f0a500;
+  transform: scale(1.05);
+}
+
+.header-content button:active {
+  background-color: #eca345;
+  transform: scale(1);
+}
+
+/* Responsive Styles */
+
+/* Large Screen (above 1024px) */
+@media (max-width: 1024px) {
+  .header-content {
+    max-width: 60%;
+    left: 4vw;
+    margin-left: 3rem;
+  }
+  .header-content h1 {
+    font-size: max(4vw, 20px);
+  }
+  .header-content p {
+    font-size: 1.2vw;
+  }
+  .header {
+    height: 40vw;
+    margin-right: 3rem;
+  }
+}
+
+/* Tablet Screen (768px - 1024px) */
+@media (max-width: 768px) {
+  .header {
+    background-size: cover;
+    height: 50vw;
+    margin-right: 2rem;
+  }
+  .header-content {
+    max-width: 70%;
+    left: 4vw;
+    gap: 2vw;
+    margin-left: 2rem;
+  }
+  .header-content h1 {
+    font-size: 3vw;
+  }
+  .header-content p {
+    font-size: 1.5vw;
+  }
+  .header-content button {
+    padding: 1.5vw 3vw;
+    font-size: 1.2vw;
+  }
+}
+
+/* Mobile Screen (up to 767px) */
+@media (max-width: 767px) {
+  .header {
+    background-size: cover;
+    height: 60vw;
+    margin-right: 1rem;
+  }
+  .header-content {
+    max-width: 90%;
+    left: 3vw;
+    gap: 2.5vw;
+    margin-left: 1rem;
+  }
+  .header-content h1 {
+    font-size: 5vw;
+  }
+  .header-content p {
+    font-size: 2.5vw;
+  }
+  .header-content button {
+    padding: 2vw 4vw;
+    font-size: 2vw;
+  }
 }
