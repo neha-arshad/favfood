@@ -1,8 +1,6 @@
 "use client";
 import { createContext, ReactNode, useEffect, useState } from "react";
 import food_List from "../Food/Foodlist";
-
-//type for food items
 interface FoodItem {
   id: number;
   image: string;
@@ -19,7 +17,6 @@ interface FoodContextType {
   removeCart: (itemId: number) => void;
 }
 
-//default value
 export const storeContext = createContext<FoodContextType | null>(null);
 
 // Context provider component

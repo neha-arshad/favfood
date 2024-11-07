@@ -1,8 +1,9 @@
 "use client";
 import React, { useState } from "react";
+import Image from "next/image";
 
 interface NavbarProps {
-  setShowLogin: any;
+  setShowLogin: (value: boolean) => void;
 }
 
 const Navbar: React.FC<NavbarProps> = ({ setShowLogin }) => {
@@ -15,7 +16,7 @@ const Navbar: React.FC<NavbarProps> = ({ setShowLogin }) => {
   return (
     <nav className="navbar">
       <div className="logo">
-        <img src="/Images/favuroite-foodlogo.png" alt="logo" />
+        <Image src="/Images/favuroite-foodlogo.png" alt="logo" />
       </div>
 
       <ul className={`nav-list ${isOpen ? "show" : ""}`}>

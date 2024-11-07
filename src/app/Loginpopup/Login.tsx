@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./Login.css";
+import Image from "next/image";
 
 interface LoginProps {
   setShowLogin: (value: boolean) => void | boolean;
@@ -12,7 +13,7 @@ const Login: React.FC<LoginProps> = ({ setShowLogin }) => {
       <form className="login-container">
         <div className="login-popup-title">
           <h2>{currentState}</h2>
-          <img
+          <Image
             onClick={() => setShowLogin(false)}
             src="Images/cross_icon.png"
             alt=""

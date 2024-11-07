@@ -1,7 +1,9 @@
+import Image from "next/image";
 import React from "react";
 import { menu_list } from "./MenuList";
 import "./Explore.css";
 import { Dispatch, SetStateAction } from "react";
+
 
 interface ExploreProps {
   Category: string;
@@ -13,8 +15,8 @@ const Explore: React.FC<ExploreProps> = ({ Category, setCategory }) => {
     <div className="explore-menu" id="explore-menu">
       <h1>Art of Cuisine</h1>
       <p className="explore-menu-text">
-        First we eat, then we do everything else. Food is the ingredient that
-        binds us together. Eat good, feel good, live good."
+        &quot;First we eat, then we do everything else. Food is the ingredient
+        that binds us together. Eat good, feel good, live good.&quot;
       </p>
 
       <div className="explore-menu-list">
@@ -27,7 +29,7 @@ const Explore: React.FC<ExploreProps> = ({ Category, setCategory }) => {
               key={index}
               className="explore-menu-list-item"
             >
-              <img
+              <Image
                 className={Category === menu.name ? "active" : ""}
                 src={menu.image}
                 alt="images"
