@@ -9,10 +9,10 @@ const Footer = () => {
         <div className="footer-content-left">
           <p>Let's Connect with Us</p>
           <div className="footer-social-icon">
-						<Link href={"https:F"}>
+						<Link href={"https://m.facebook.com"}>
             <img src="/Images/facebook_icon.png" alt="facebook-icon" />
 						</Link>
-						<Link href={""}>
+						<Link href={"https://pk.linkedin.com"}>
             <img src="/Images/linkedin_icon.png" alt="linkedin-icon" />
 						</Link>
           </div>
