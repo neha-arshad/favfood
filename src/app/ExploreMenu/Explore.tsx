@@ -29,7 +29,7 @@ const Explore: React.FC<ExploreProps> = ({ Category, setCategory }) => {
               key={index}
               className="explore-menu-list-item"
             >
-              <Image
+              <img
                 className={Category === menu.name ? "active" : ""}
                 src={menu.image}
                 alt="images"

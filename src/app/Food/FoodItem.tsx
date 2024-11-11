@@ -43,9 +43,9 @@ const FoodItem: React.FC<FoodItemsProp> = ({
   return (
     <div className="food-item">
       <div className="food-item-container">
-        <Image className="food-item-image" src={image} alt="Food item" />
+        <img className="food-item-image" src={image} alt="Food item" />
         {!cartItem[id] ? (
-          <Image
+          <img
             className="add"
             onClick={handleAddToCart}
             src="/Images/add_icon.png"
@@ -53,13 +53,13 @@ const FoodItem: React.FC<FoodItemsProp> = ({
           />
         ) : (
           <div className="food-item-counter">
-            <Image
+            <img
               onClick={handleRemoveFromCart}
               src="/Images/remove_icon_red.png"
               alt="remove_icon"
             />
             <p>{cartItem[id]}</p>
-            <Image
+            <img
               onClick={handleAddToCart}
               src="/Images/add_icon_green.png"
               alt="add_icon_green"
@@ -70,7 +70,7 @@ const FoodItem: React.FC<FoodItemsProp> = ({
       <div className="food-item-info">
         <div className="food-item-rating">
           <p>{name}</p>
-          <Image src="/Images/rating_starts.png" alt="rating-star" />
+          <img src="/Images/rating_starts.png" alt="rating-star" />
         </div>
         <p className="food-item-description">{description}</p>
         <p className="food-item-price">${price}</p>

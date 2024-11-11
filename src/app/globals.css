@@ -16,7 +16,7 @@ body {
 
 .logo img {
   width: 70px;
-  height: 70px;
+   height: 70px; 
   margin-left: 1rem;
   border-radius: 50%;
   border: 3px solid #e69500;

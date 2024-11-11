@@ -15,9 +15,11 @@ const Navbar: React.FC<NavbarProps> = ({ setShowLogin }) => {
 
   return (
     <nav className="navbar">
-      <div className="logo">
-        <Image src="/Images/favuroite-foodlogo.png" alt="logo" />
-      </div>
+			<div className="logo">
+        <img src="/Images/favuroite-foodlogo.png" alt="logo"
+			
+	/>
+	</div>
 
       <ul className={`nav-list ${isOpen ? "show" : ""}`}>
         <li>
