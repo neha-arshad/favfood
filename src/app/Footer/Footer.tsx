@@ -11,11 +11,11 @@ const Footer = () => {
           <p>Let&apos;s Connect with Us</p>
           <div className="footer-social-icon">
             <Link href={"https://m.facebook.com"}>
-              <img src="/Images/facebook_icon.png" alt="facebook-icon" />
+              <Image src="/Images/facebook_icon.png" alt="facebook-icon" />
             </Link>
 
             <Link href={"https://pk.linkedin.com"}>
-              <img src="/Images/linkedin_icon.png" alt="linkedin-icon" />
+              <Image src="/Images/linkedin_icon.png" alt="linkedin-icon" />
             </Link>
           </div>
         </div>
